@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" manifest="datos.appache">
+    <head>
+        <title>Sing in</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../Imagenes/Logo.png" type="image/png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <a class="" href="Inicio.html"><img src="../imagenes/Logo.png" style="border-radius: 100%; width: 70px; height: 70px;"></a>
+            <div>
+                <button><img src="../imagenes/user-shape-removebg.png" style="width: 35px; height: 35px;"></button>
+                <div>
+                    <div>
+                        <button type="submit" class="">Seleccion de idioma</button>
+                        <input class="" type="user" placeholder="Usuario">
+                        <input class="" type="password" placeholder="Contraseña">
+                        <button class="" type="submit">Ingresar</button>
+                        <a class="" href="Sing_up.html" type="submit">Registro</a>
+                    </div>
+                </div>
+                <form></form>
+            </div>
+        </header>
+        <div class="info_personal">
+            <form action="pagina.php" method="get" target="_blank" enctype="multipart/form-data">
+                <fieldset style="width:350px">
+                    <legend>Datos Personales</legend>
+                    <br>
+                    <label>Nombre</label>
+                    <br>
+                    <input type="text" name="nombre" size="25" required pattern="([a-zA-Z]){4,20}">
+                    <br><br>
+                    <label>Apellido</label>
+                    <br>
+                    <input type="text" name="apellido" size="25" required pattern="([a-zA-Z]){4,20}">
+                    <br><br>
+                    <label>Documento</label>
+                    <br>
+                    <input type="text" name="Documento" size="10" required pattern="[0-9]">
+                    <br><br>
+                    <label>Telefono</label>
+                    <br>
+                    <input type="text" name="telefono" pattern="[0-9]{7,10}">
+                    <br><br>
+                    <label>Fecha de nacimiento</label>
+                    <br>
+                    <input type="date" name="bday" required>
+                    <br><br>
+                    <label>Direccion actual de residencia</label>
+                    <br>
+                    <input type="text" name="nombre" size="25" required pattern="(#[a-zA-Z])">
+                    <br><br>
+                </fieldset>
+            </form>
+        </div>
+        <div class="Datos_cuenta">
+            <form action="pagina.php" method="get" target="_blank" enctype="multipart/form-data">
+                <fieldset style="width:350px">
+                    <legend>Datos de Cuenta</legend>
+                    <br>
+                    <label>Nickname</label>
+                    <br>
+                    <input type="text" name="nombre" size="25" required pattern="([a-zA-Z][0-9]){4,20}">
+                    <br><br>
+                    <label>Correo electronico</label>
+                    <br>
+                    <input type="text" name="email"  required pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,}"/>
+                    <br><br>
+                    <label>Contrseña</label>
+                    <br>
+                    <input type="password" name="password1" required pattern="([a-zA-Z]){8}">
+                    <br><br>
+                    <label>Confirmar Contrseña</label>
+                    <br>
+                    <input type="password" name="password2" required pattern="([a-zA-Z]){8}">
+                    <br><br>
+                    <label>Foto de perfil</label>
+                    <br>
+                    <input type="file" name="foto" required></input>
+                </fieldset>
+            </form>
+        </div>
+        <div class="Datos_finan">
+                <fieldset style="width:350px">
+
+                    <p>Master Card</p>
+                    <div>
+                        <form action="pagina.php" method="get" target="_blank" enctype="multipart/form-data">
+                            <label>Numero de tarjeta</label>
+                            <br>
+                            <input type="text" name="NroCard" pattern="[0-9]{16}" required>
+                            <br><br>
+                            <label>Nombre</label>
+                            <br>
+                            <input type="text" name="name" size="25" required pattern="([a-zA-Z]){4,20}">
+                            <br><br>
+                            <label>Apellido</label>
+                            <br>
+                            <input type="text" name="surname" size="25" required pattern="([a-zA-Z]){4,20}" required>
+                            <br><br>
+                            <label>Fecha de expiracion</label>
+                            <br>
+                            <input type="date" name="EXP" required>
+                            <br><br>
+                            <label>Codigo CSV</label>
+                            <br>
+                            <input type="text" name="CSV" required pattern="[0-9]{3}">
+                        </form>
+                    <p>PayPal</p>
+                    <div>
+                        <form action="pagina.php" method="get" target="_blank" enctype="multipart/form-data">
+                            <label>Numero de cuenta</label>
+                            <br>
+                            <input type="text" name="cuenta" required pattern="[0-9]{16}">
+                            <br><br>
+                            <label>Contrasena de seguridad</label>
+                            <br>
+                            <input type="text" name="passPAYPAL" required pattern="[0-9]{8}">
+
+                        </form>
+
+                    </div>
+                    <p>PSE</p>
+                    <div>
+                        <form action="pagina.php" method="get" target="_blank" enctype="multipart/form-data">
+                            <label> Seleccione banco</label>
+                            <select name="Banco" required>
+                                <option>Bancolombia</option>
+                                <option>Davivienda</option>
+                                <option>Nequi</option>
+                                <option>Avevillas</option>
+                                <option>BBVA</option>
+                            </select>
+                            <br><br>
+                            <label>Fecha de expiracion</label>
+                            <br>
+                            <input type="date" required>
+                            <br><br>
+                            <label>Codigo de seguridad</label>
+                            <br>
+                            <input type="text" name="CODI" required pattern="[0-9]{3}">
+                        </form>
+
+                    </div>
+                </fieldset>
+        </div>
+    </body>
+    <footer>
+        <h1>Aqui va el footer</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, optio dolor! Dolores, dignissimos doloremque vitae adipisci magnam deleniti veritatis natus debitis, voluptatum corrupti excepturi, aspernatur sunt nesciunt optio repellendus nisi.</p>
+    </footer>
+</html>
